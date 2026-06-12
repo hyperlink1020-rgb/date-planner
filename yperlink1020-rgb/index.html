@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💕 Date Planner - Our Special Moments</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006?w=60&h=60&fit=crop" alt="Cute kitten" class="header-kitten">
+                <h1>💕 Our Date Planner 💕</h1>
+                <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006?w=60&h=60&fit=crop" alt="Cute kitten" class="header-kitten">
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Left Sidebar - Calendar -->
+            <aside class="sidebar">
+                <div class="calendar-section">
+                    <h2>📅 Calendar</h2>
+                    <div id="calendar" class="calendar"></div>
+                    <div class="mini-calendar">
+                        <button id="prevMonth" class="nav-btn">◀</button>
+                        <h3 id="monthYear"></h3>
+                        <button id="nextMonth" class="nav-btn">▶</button>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Right Content - Date Input & List -->
+            <section class="content">
+                <!-- Kitten Image -->
+                <div class="content-kitten">
+                    <img src="https://images.unsplash.com/photo-1519052537078-e6302a4968d4?w=300&h=300&fit=crop" alt="Cute kitten" class="main-kitten">
+                </div>
+
+                <!-- Add New Date Form -->
+                <div class="form-section">
+                    <h2>🎉 Plan a Special Date</h2>
+                    
+                    <div class="form-group">
+                        <label for="dateInput">Date:</label>
+                        <input type="date" id="dateInput" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="titleInput">Date Title:</label>
+                        <input type="text" id="titleInput" placeholder="e.g., Romantic Dinner" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="categorySelect">Category:</label>
+                        <select id="categorySelect" required>
+                            <option value="">Select a category...</option>
+                            <option value="dinner">🍽️ Dinner</option>
+                            <option value="movie">🎬 Movie Night</option>
+                            <option value="adventure">🏔️ Adventure</option>
+                            <option value="picnic">🧺 Picnic</option>
+                            <option value="travel">✈️ Travel</option>
+                            <option value="gift">🎁 Gift Exchange</option>
+                            <option value="anniversary">💍 Anniversary</option>
+                            <option value="other">✨ Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="descriptionInput">Description:</label>
+                        <textarea id="descriptionInput" placeholder="Add details about your date..." rows="3"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phoneInput">Phone Number (for SMS notifications):</label>
+                        <input type="tel" id="phoneInput" placeholder="+1 (555) 123-4567" pattern="[+0-9\s\-\(\)]+">
+                        <small>Leave blank if you don't want notifications</small>
+                    </div>
+
+                    <button id="addDateBtn" class="btn btn-primary">Add Date ✨</button>
+                </div>
+
+                <!-- Settings Section -->
+                <div class="settings-section">
+                    <h3>⚙️ Settings</h3>
+                    <div class="form-group">
+                        <label for="defaultPhone">Default Phone Number:</label>
+                        <input type="tel" id="defaultPhone" placeholder="+1 (555) 123-4567" pattern="[+0-9\s\-\(\)]+">
+                        <button id="savePhone" class="btn btn-secondary">Save</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Dates List -->
+        <section class="dates-section">
+            <h2>📋 Upcoming Dates</h2>
+            <div id="datesList" class="dates-list"></div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Made with 💕 for your special moments • Cute kitten graphics included 🐱</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
